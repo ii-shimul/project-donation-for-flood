@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+  <!-- tailwind and daisyui cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- lexend font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+    .lexend {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body class="lexend relative">
+  <header
+    class="sticky top-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.1),_rgba(255,255,255,0))] backdrop-blur-lg bg-opacity-10 shadow-sm">
+    <!-- navbar start -->
+    <div class="bg-[#F9F7F3] bg-opacity-60">
+      <div class="flex justify-between items-center max-w-[75%] mx-auto py-6">
+        <div id="home" class="btn bg-[#B4F461]">Home</div>
+        <div class="flex justify-center items-center gap-4">
+          <img class="h-12 w-12" src="./assets/logo.png" alt="">
+          <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+        </div>
+        <div class="flex justify-center items-center gap-3">
+          <img src="./assets/coin.png" alt="">
+          <h4 class="font-medium text-xl opacity-70"><span id="balance">10000000</span> BDT</h4>
+        </div>
+      </div>
+    </div>
+    <!-- navbar end -->
+  </header>
+
+  <main class="max-w-[70%] mx-auto">
+
+    <div class="flex items-center gap-2 my-7">
+      <h1 class="text-4xl font-bold">Important FAQ</h1>
+      <img class="h-10 w-auto" src="./assets/icons8-faq.gif" alt="">
+    </div>
+
+    <!-- accordion -->
+    <div class="px-5 border rounded-xl">
+      <!-- Accordion Item 1 -->
+      <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+          <span>What is Document Object Model (DOM)?</span>
+          <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd"
+                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+        <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="pb-5 text-sm text-slate-500">
+            The **DOM (Document Object Model)** is like a map of a webpage that shows all the elements, such as
+            paragraphs, buttons,
+            and images, as a tree structure. It lets me use JavaScript to interact with and change these elements, like
+            updating
+            text, adding styles, or removing items. So, when I change something using JavaScript, the changes immediately
+            reflect on
+            the webpage. This helps make webpages dynamic and more interactive for users.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Accordion Item 2 -->
+      <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+          <span>How do you select an element from the DOM?</span>
+          <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd"
+                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+        <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="pb-5 text-sm text-slate-500">
+            To select an element from the DOM, you can use `document.getElementById()` if the element has a unique ID,
+            like this:
+            `document.getElementById("myId")`. Another way is using `document.querySelector()`, which lets you select
+            elements with
+            CSS selectors, like this: `document.querySelector(".myClass")` for a class or `document.querySelector("div")`
+            for a tag.
+            These methods let me grab elements from the page so I can manipulate them with JavaScript.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Accordion Item 3 -->
+      <div class="border-b border-slate-200">
+        <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+          <span>What is event delegation in the context of DOM, and why is it useful?</span>
+          <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd"
+                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+        <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="pb-5 text-sm text-slate-500">
+            **Event delegation** is a technique in which a single event listener is added to a parent element instead of
+            multiple
+            listeners on individual child elements. This approach takes advantage of event bubbling, where events
+            triggered on a
+            child element propagate up to its parent, allowing the parent to capture and handle the events from any of its
+            children.
+            Event delegation is useful because it improves performance by reducing the number of event listeners, it
+            handles dynamic
+            content effectively by automatically working for new child elements without requiring additional code, and it
+            simplifies
+            the code structure by managing many child elements with just one event listener, making maintenance easier.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Accordion Item 4 -->
+      <div class="">
+        <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center py-5 text-slate-800">
+          <span>How do you manipulate an element's attributes and styles using DOM?</span>
+          <span id="icon-4" class="text-slate-800 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd"
+                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+        <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="pb-5 text-sm text-slate-500">
+            To manipulate an element's attributes and styles using the DOM in JavaScript, I can use specific methods and
+            properties.
+            For attributes, I can use `setAttribute`, `getAttribute`, and `removeAttribute`. For example, to set an
+            attribute, I
+            might write `myElement.setAttribute("src", "image.jpg")`, which sets the `src` attribute of the element. To
+            get an
+            attribute value, I can use `myElement.getAttribute("src")`, and to remove it, I'd use
+            `myElement.removeAttribute("src")`.
+      
+            When it comes to styles, I can directly modify the `style` property of an element. For instance, I can change
+            the
+            background color with `myElement.style.backgroundColor = "blue"` or adjust the font size using
+            `myElement.style.fontSize
+            = "20px"`. I can also set multiple styles at once by using `myElement.style.cssText = "color: white; padding:
+            10px;"`,
+            allowing me to easily update the element's appearance.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleAccordion(index) {
+      const content = document.getElementById(`content-${index}`);
+      const icon = document.getElementById(`icon-${index}`);
+
+      // SVG for Down icon
+      const downSVG = `
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+              </svg>
+            `;
+
+      // SVG for Up icon
+      const upSVG = `
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+              </svg>
+            `;
+
+      // Toggle the content's max-height for smooth opening and closing
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0';
+        icon.innerHTML = upSVG;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.innerHTML = downSVG;
+      }
+    }
+  </script>
+  <script src="./js/blog.js"></script>
+</body>
+
+</html>

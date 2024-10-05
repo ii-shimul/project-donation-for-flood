@@ -40,11 +40,13 @@ function donationButtonListener(btnID, currentDonationID, newDonationID) {
 			timeZone: "Asia/Dhaka",
 			timeZoneName: "long",
 		});
-
+		count += 1;
     const history = document.getElementById("historyTab");
 
     // removing the not donated reminder in history first 
-    history.removeChild(document.getElementById("notDonated"));
+    if (count ==  1) {
+			history.removeChild(document.getElementById("notDonated"));
+		}
 
 		if (btnID === "btn-noakhali") {
       const newHistory = document.createElement("div");
