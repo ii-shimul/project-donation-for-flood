@@ -26,32 +26,32 @@
     class="sticky top-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.1),_rgba(255,255,255,0))] backdrop-blur-lg bg-opacity-10 shadow-sm">
     <!-- navbar start -->
     <div class="bg-[#F9F7F3] bg-opacity-60">
-      <div class="flex justify-between items-center max-w-[75%] mx-auto py-6">
-        <div id="blog" class="btn bg-[#B4F461]">Blog</div>
-        <div class="flex justify-center items-center gap-4">
-          <img class="h-12 w-12" src="./assets/logo.png" alt="">
-          <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+      <div class="flex justify-between items-center max-w-[75%] mx-auto py-6 max-sm:max-w-[90%] max-sm:py-3">
+        <div id="blog" class="btn bg-[#B4F461] max-sm:btn-sm">Blog</div>
+        <div class="flex justify-center items-center gap-4 max-sm:flex-col max-sm:gap-2">
+          <img class="h-12 w-12 max-sm:" src="./assets/logo.png" alt="">
+          <h1 class="text-xl font-semibold max-sm:text-base">Donate Bangladesh</h1>
         </div>
-        <div class="flex justify-center items-center gap-3">
+        <div class="flex justify-center items-center gap-3 max-sm:gap-1">
           <img src="./assets/coin.png" alt="">
-          <h4 class="font-medium text-xl opacity-70"><span id="balance">10000000</span> BDT</h4>
+          <h4 class="font-medium text-xl opacity-70 max-sm:text-sm"><span id="balance">9750</span> BDT</h4>
         </div>
       </div>
     </div>
     <!-- navbar end -->
 
     <!-- donation and history start -->
-    <div class="flex items-center justify-center py-6 gap-4 ">
+    <div class="flex items-center justify-center py-6 gap-4 max-sm:py-3">
       <div id="btnDonation" class="btn bg-[#B4F461]">Donation</div>
       <div id="btnHistory" class="btn">History</div>
     </div>
     <!-- donation and history end -->
   </header>
-  <main class="max-w-[70%] mx-auto my-8">
+  <main class="max-w-[85%] mx-auto my-8">
     <!-- donation cards -->
-    <div id="donationCards" class="space-y-8">
+    <div id="donationCards" class="space-y-4">
       <!-- noakhali card -->
-      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300">
+      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300 max-sm:grid-cols-1 max-sm:p-4">
         <div class="w-full h-full">
           <img class="w-full h-full " src="./assets/noakhali.png" alt="">
         </div>
@@ -90,7 +90,7 @@
         </div>
       </div>
       <!-- feni card -->
-      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300">
+      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300 max-sm:grid-cols-1 max-sm:p-4">
         <div class="w-full h-full">
           <img class="w-full h-full " src="./assets/feni.png" alt="">
         </div>
@@ -115,7 +115,7 @@
         </div>
       </div>
       <!-- quota card -->
-      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300">
+      <div class="grid grid-cols-2 gap-8 p-8 rounded-2xl border border-gray-300 max-sm:grid-cols-1 max-sm:p-4">
         <div class="w-full h-full">
           <img class="w-full h-full " src="./assets/quota-protest.png" alt="">
         </div>
@@ -145,7 +145,7 @@
 
     <!-- history tab -->
     <div id="historyTab" class="hidden grid grid-cols-1 gap-6">
-      <div id="notDonated" class="text-5xl font-bold text-center">You have not donated yet ;(</div>
+      <div id="notDonated" class="text-5xl font-bold text-center max-sm:text-xl">You have not donated yet ;(</div>
     </div>
     <!-- history tab end -->
   </main>

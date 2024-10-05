@@ -26,26 +26,26 @@
     class="sticky top-0 bg-[linear-gradient(135deg,_rgba(255,255,255,0.1),_rgba(255,255,255,0))] backdrop-blur-lg bg-opacity-10 shadow-sm">
     <!-- navbar start -->
     <div class="bg-[#F9F7F3] bg-opacity-60">
-      <div class="flex justify-between items-center max-w-[75%] mx-auto py-6">
+      <div class="flex justify-between items-center max-w-[75%] mx-auto py-6 max-sm:max-w-[90%] max-sm:py-3">
         <div id="home" class="btn bg-[#B4F461]">Home</div>
-        <div class="flex justify-center items-center gap-4">
+        <div class="flex justify-center items-center gap-4 max-sm:flex-col max-sm:gap-2">
           <img class="h-12 w-12" src="./assets/logo.png" alt="">
-          <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+          <h1 class="text-xl font-semibold max-sm:text-base">Donate Bangladesh</h1>
         </div>
-        <div class="flex justify-center items-center gap-3">
+        <div class="flex justify-center items-center gap-3 max-sm:gap-1">
           <img src="./assets/coin.png" alt="">
-          <h4 class="font-medium text-xl opacity-70"><span id="balance">10000000</span> BDT</h4>
+          <h4 class="font-medium text-xl opacity-70  max-sm:text-sm"><span id="balance">9750</span> BDT</h4>
         </div>
       </div>
     </div>
     <!-- navbar end -->
   </header>
 
-  <main class="max-w-[70%] mx-auto">
+  <main class="max-w-[85%] mx-auto">
 
     <div class="flex items-center gap-2 my-7">
-      <h1 class="text-4xl font-bold">Important FAQ</h1>
-      <img class="h-10 w-auto" src="./assets/icons8-faq.gif" alt="">
+      <h1 class="text-4xl font-bold max-sm:text-2xl">Important FAQ</h1>
+      <img class="h-8 w-auto" src="./assets/icons8-faq.gif" alt="">
     </div>
 
     <!-- accordion -->
@@ -53,7 +53,7 @@
       <!-- Accordion Item 1 -->
       <div class="border-b border-slate-200">
         <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
-          <span>What is Document Object Model (DOM)?</span>
+          <span class="max-sm:text-sm max-sm:text-left">What is Document Object Model (DOM)?</span>
           <span id="icon-1" class="text-slate-800 transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
               <path fill-rule="evenodd"
@@ -78,7 +78,7 @@
       <!-- Accordion Item 2 -->
       <div class="border-b border-slate-200">
         <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
-          <span>How do you select an element from the DOM?</span>
+          <span class="max-sm:text-sm max-sm:text-left">How do you select an element from the DOM?</span>
           <span id="icon-2" class="text-slate-800 transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
               <path fill-rule="evenodd"
@@ -103,7 +103,7 @@
       <!-- Accordion Item 3 -->
       <div class="border-b border-slate-200">
         <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
-          <span>What is event delegation in the context of DOM, and why is it useful?</span>
+          <span class="max-sm:text-sm max-sm:text-left">What is event delegation in the context of DOM, and why is it useful?</span>
           <span id="icon-3" class="text-slate-800 transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
               <path fill-rule="evenodd"
@@ -132,7 +132,7 @@
       <!-- Accordion Item 4 -->
       <div class="">
         <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center py-5 text-slate-800">
-          <span>How do you manipulate an element's attributes and styles using DOM?</span>
+          <span class="max-sm:text-sm max-sm:text-left">How do you manipulate an element's attributes and styles using DOM?</span>
           <span id="icon-4" class="text-slate-800 transition-transform duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
               <path fill-rule="evenodd"

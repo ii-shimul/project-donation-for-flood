@@ -2,7 +2,7 @@
 function inputValue(id) {
 	const value = document.getElementById(id).value;
 	const amount = parseFloat(document.getElementById(id).value);
-	if (typeof amount !== "number" || value === "") {
+	if (isNaN(amount) || value.trim() === "") {
 		return -1;
 	}
 	return amount;
@@ -41,15 +41,15 @@ function donationButtonListener(btnID, currentDonationID, newDonationID) {
 			timeZoneName: "long",
 		});
 		count += 1;
-    const history = document.getElementById("historyTab");
+		const history = document.getElementById("historyTab");
 
-    // removing the not donated reminder in history first 
-    if (count ==  1) {
+		// removing the not donated reminder in history first
+		if (count == 1) {
 			history.removeChild(document.getElementById("notDonated"));
 		}
 
 		if (btnID === "btn-noakhali") {
-      const newHistory = document.createElement("div");
+			const newHistory = document.createElement("div");
 			newHistory.classList.add("p-8", "rounded-2xl", "border");
 			newHistory.innerHTML = `
           <h1 class="text-xl font-bold">${newDonation} Taka is Donated for Flood-2024 at Noakhali, Bangladesh</h1>
@@ -57,7 +57,7 @@ function donationButtonListener(btnID, currentDonationID, newDonationID) {
             Date : ${date}
           </p>
         `;
-			history.appendChild(newHistory);
+			history.insertBefore(newHistory, history.firstChild);
 		}
 		if (btnID === "btn-feni") {
 			const newHistory = document.createElement("div");
@@ -68,7 +68,7 @@ function donationButtonListener(btnID, currentDonationID, newDonationID) {
             Date : ${date}
           </p>
         `;
-			history.appendChild(newHistory);
+			history.insertBefore(newHistory, history.firstChild);
 		}
 		if (btnID === "btn-quota") {
 			const newHistory = document.createElement("div");
@@ -79,7 +79,7 @@ function donationButtonListener(btnID, currentDonationID, newDonationID) {
             Date : ${date}
           </p>
         `;
-			history.appendChild(newHistory);
+			history.insertBefore(newHistory, history.firstChild);
 		}
 	});
 }
